@@ -62,15 +62,17 @@ h1, h2, h3 {
     animation: slideInRight 0.6s ease-out forwards;
 }
 
-/* REVEAL ON SCROLL (Disabled for debugging) */
+/* REVEAL ON SCROLL */
 .reveal-on-scroll {
-    opacity: 1;
-    transform: none;
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1), transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+    will-change: opacity, transform;
 }
 
 .reveal-on-scroll.is-visible {
     opacity: 1;
-    transform: none;
+    transform: translateY(0);
 }
 
 /* Mobile-First Grid System */
