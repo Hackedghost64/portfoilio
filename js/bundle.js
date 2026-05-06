@@ -55,24 +55,29 @@ class BaseComponent extends HTMLElement {
 class NavbarComponent extends BaseComponent {
     styles() {
         return `
+            @import url('https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap');
             :host { display: block; position: sticky; top: 0; z-index: 1000; background: rgba(11, 19, 38, 0.8); backdrop-filter: blur(12px); border-bottom: 1px solid rgba(140, 144, 159, 0.1); }
             nav { max-width: var(--container-max, 1440px); margin: 0 auto; padding: 1rem var(--gutter, 24px); display: flex; justify-content: space-between; align-items: center; }
-            .logo { font-family: var(--font-headline, sans-serif); font-weight: 700; font-size: 1.25rem; color: var(--primary, #adc6ff); text-decoration: none; }
+            .logo { font-family: var(--font-headline, sans-serif); font-weight: 700; font-size: 1.25rem; color: var(--primary, #adc6ff); text-decoration: none; display: flex; align-items: center; gap: 0.5rem; }
             .nav-links { display: flex; gap: 2rem; }
-            .nav-links a { text-decoration: none; color: var(--on-surface, #dae2fd); font-size: 0.9rem; font-weight: 500; transition: color 0.3s ease; opacity: 0.7; }
+            .nav-links a { text-decoration: none; color: var(--on-surface, #dae2fd); font-size: 0.9rem; font-weight: 500; transition: color 0.3s ease; opacity: 0.7; display: flex; align-items: center; gap: 0.4rem; }
             .nav-links a:hover { opacity: 1; color: var(--primary, #adc6ff); }
-            @media (max-width: 768px) { .nav-links { display: none; } }
+            .material-symbols-outlined { font-family: 'Material Symbols Outlined'; font-weight: normal; font-style: normal; font-size: 20px; line-height: 1; letter-spacing: normal; text-transform: none; display: inline-block; white-space: nowrap; word-wrap: normal; direction: ltr; -webkit-font-smoothing: antialiased; }
+            @media (max-width: 768px) { 
+                nav { flex-direction: column; gap: 1rem; }
+                .nav-links { flex-wrap: wrap; justify-content: center; gap: 1rem; }
+            }
         `;
     }
     template() {
         return `
             <nav>
-                <a href="#" class="logo">DG // ARCHITECT</a>
+                <a href="#" class="logo"><span class="material-symbols-outlined">architecture</span> DG // ARCHITECT</a>
                 <div class="nav-links">
-                    <a href="#about">Philosophy</a>
-                    <a href="#projects">Engineering</a>
-                    <a href="#tech">Stack</a>
-                    <a href="https://github.com/Hackedghost64" target="_blank">GitHub</a>
+                    <a href="#about"><span class="material-symbols-outlined">lightbulb</span> Philosophy</a>
+                    <a href="#projects"><span class="material-symbols-outlined">terminal</span> Engineering</a>
+                    <a href="#tech"><span class="material-symbols-outlined">dns</span> Stack</a>
+                    <a href="https://github.com/Hackedghost64" target="_blank"><span class="material-symbols-outlined">code</span> GitHub</a>
                 </div>
             </nav>
         `;
@@ -84,16 +89,18 @@ customElements.define('portfolio-nav', NavbarComponent);
 class HeroComponent extends BaseComponent {
     styles() {
         return `
+            @import url('https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap');
             :host { display: block; padding: var(--section-gap, 80px) 0; background: linear-gradient(to bottom, #0b1326, #131b2e); }
-            .hero-content { text-align: center; max-width: 800px; margin: 0 auto; }
+            .hero-content { text-align: center; max-width: 800px; margin: 0 auto; padding: 0 var(--gutter, 24px); }
             h1 { font-size: clamp(2.5rem, 8vw, 4.5rem); color: var(--primary, #adc6ff); margin-bottom: 1rem; line-height: 1.1; font-family: var(--font-headline, sans-serif); }
             p { font-size: clamp(1.125rem, 2vw, 1.5rem); color: var(--on-surface, #dae2fd); opacity: 0.8; margin-bottom: 2.5rem; font-family: var(--font-body, sans-serif); }
             .btn-group { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; }
-            .btn { padding: 12px 28px; border-radius: 8px; font-weight: 600; text-decoration: none; transition: all 0.3s ease; font-family: var(--font-headline, sans-serif); }
+            .btn { display: inline-flex; align-items: center; gap: 0.5rem; padding: 12px 28px; border-radius: 8px; font-weight: 600; text-decoration: none; transition: all 0.3s ease; font-family: var(--font-headline, sans-serif); }
             .btn-primary { background: var(--primary, #adc6ff); color: var(--on-primary, #002e6a); }
             .btn-primary:hover { transform: translateY(-2px); box-shadow: 0 10px 20px rgba(173, 198, 255, 0.2); }
             .btn-outline { border: 1px solid var(--outline, #8c909f); color: var(--on-surface, #dae2fd); }
             .btn-outline:hover { background: rgba(218, 226, 253, 0.05); }
+            .material-symbols-outlined { font-family: 'Material Symbols Outlined'; font-weight: normal; font-style: normal; font-size: 24px; line-height: 1; letter-spacing: normal; text-transform: none; display: inline-block; white-space: nowrap; word-wrap: normal; direction: ltr; -webkit-font-smoothing: antialiased; }
         `;
     }
     template() {
@@ -102,8 +109,8 @@ class HeroComponent extends BaseComponent {
                 <h1>Divyam | Systems & Automation Developer</h1>
                 <p>Engineering scalable, OOP-driven applications and mobile-first web architectures.</p>
                 <div class="btn-group">
-                    <a href="#projects" class="btn btn-primary">View Live Projects</a>
-                    <a href="https://github.com/Hackedghost64" class="btn btn-outline" target="_blank">GitHub (@Hackedghost64)</a>
+                    <a href="#projects" class="btn btn-primary"><span class="material-symbols-outlined">rocket_launch</span> View Live Projects</a>
+                    <a href="https://github.com/Hackedghost64" class="btn btn-outline" target="_blank"><span class="material-symbols-outlined">code_blocks</span> GitHub (@Hackedghost64)</a>
                 </div>
             </section>
         `;
@@ -143,7 +150,7 @@ class ProjectsComponent extends BaseComponent {
             :host { display: block; min-height: 100vh; display: flex; align-items: center; padding: var(--section-gap, 80px) 0; background: #0f172a; }
             .container { max-width: var(--container-max, 1440px); margin: 0 auto; padding: 0 var(--gutter, 24px); width: 100%; box-sizing: border-box; }
             h2 { color: var(--primary, #adc6ff); margin-bottom: 3rem; font-size: 2.5rem; text-align: center; font-family: var(--font-headline, sans-serif); }
-            .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 450px)); gap: 2rem; justify-content: center; }
+            .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 350px), 1fr)); gap: 2rem; justify-content: center; }
             .card { background: var(--surface, #171f33); border: 1px solid rgba(140, 144, 159, 0.1); border-radius: 12px; padding: 32px; transition: transform 0.4s ease; display: flex; flex-direction: column; box-sizing: border-box; }
             .card:hover { transform: translateY(-8px); border-color: var(--primary, #adc6ff); }
             .stack { font-family: var(--font-headline, sans-serif); color: var(--primary, #adc6ff); font-size: 0.875rem; text-transform: uppercase; margin-bottom: 0.75rem; }
@@ -169,14 +176,6 @@ class ProjectsComponent extends BaseComponent {
 }
 customElements.define('portfolio-projects', ProjectsComponent);
 
-// --- TechStack Component ---
-class TechStackComponent extends BaseComponent {
-    styles() {
-        return `
-            :host { display: block; padding: var(--section-gap, 80px) 0; }
-            .container { max-width: var(--container-max, 1440px); margin: 0 auto; padding: 0 var(--gutter, 24px); }
-            h2 { color: var(--primary, #adc6ff); margin-bottom: 3rem; font-size: 2.5rem; text-align: center; font-family: var(--font-headline, sans-serif); }
-            .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(160px, 1fr)); gap: 1.5rem; }
 // --- TechStack Component ---
 class TechStackComponent extends BaseComponent {
     styles() {
