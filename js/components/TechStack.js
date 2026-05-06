@@ -65,7 +65,7 @@ class TechStackComponent extends BaseComponent {
                 <div class="grid">
                     ${techs.map(t => `
                         <div class="tech-item">
-                            <span class="icon">${t.icon}</span>
+                            <span class="material-symbols-outlined icon">${t.icon}</span>
                             <span>${t.name}</span>
                         </div>
                     `).join('')}
@@ -76,6 +76,4 @@ class TechStackComponent extends BaseComponent {
 }
 
 customElements.define('portfolio-tech', TechStackComponent);
-export default TechStackComponent;
-ents.define('portfolio-tech', TechStackComponent);
 export default TechStackComponent;
