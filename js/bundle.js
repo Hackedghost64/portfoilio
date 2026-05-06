@@ -177,15 +177,15 @@ class TechStackComponent extends BaseComponent {
             .container { max-width: var(--container-max, 1440px); margin: 0 auto; padding: 0 var(--gutter, 24px); }
             h2 { color: var(--primary, #adc6ff); margin-bottom: 3rem; font-size: 2.5rem; text-align: center; font-family: var(--font-headline, sans-serif); }
             .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(160px, 1fr)); gap: 1.5rem; }
-            .tech-item { background: rgba(23, 31, 51, 0.5); border: 1px solid rgba(140, 144, 159, 0.1); border-radius: 8px; padding: 24px; text-align: center; transition: all 0.3s ease; box-sizing: border-box; }
+            .tech-item { background: rgba(23, 31, 51, 0.5); border: 1px solid rgba(140, 144, 159, 0.1); border-radius: 8px; padding: 24px; text-align: center; transition: all 0.3s ease; box-sizing: border-box; display: flex; flex-direction: column; align-items: center; justify-content: center; }
             .tech-item:hover { background: var(--surface, #171f33); border-color: var(--primary, #adc6ff); transform: scale(1.05); }
-            .icon { font-size: 3rem; margin-bottom: 1rem; display: block; color: var(--primary, #adc6ff); font-family: 'Material Symbols Outlined'; }
-            span { font-family: var(--font-headline, sans-serif); font-weight: 500; color: var(--on-surface, #dae2fd); }
+            .icon { font-size: 3rem; margin-bottom: 0.5rem; display: block; color: var(--primary, #adc6ff); }
+            span { font-family: var(--font-headline, sans-serif); font-weight: 500; color: var(--on-surface, #dae2fd); font-size: 0.9rem; }
         `;
     }
     template() {
         const techs = [
-            { name: "Python", icon: "terminal" }, { name: "Dart (Flutter)", icon: "flutter" },
+            { name: "Python", icon: "terminal" }, { name: "Flutter", icon: "flutter" },
             { name: "Firebase", icon: "database" }, { name: "Linux", icon: "computer" },
             { name: "Git", icon: "history" }, { name: "System Design", icon: "architecture" }
         ];
