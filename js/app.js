@@ -8,34 +8,40 @@ import './components/TechStack.js';
 /**
  * app.js
  * Application entry point.
- * Bootstraps the modular Web Component architecture.
  */
 document.addEventListener('DOMContentLoaded', () => {
     try {
-        Logger.info('Portfolio application bootstrapping...', 'App');
-        
-        // Additional sleek logic could go here (e.g., scroll observers)
-        initScrollAnimations();
-        
+        Logger.info('Portfolio bootstrapping...', 'App');
+        initRevealOnScroll();
         Logger.info('Bootstrap complete.', 'App');
     } catch (err) {
         Logger.error(`Bootstrap failed: ${err.message}`, 'App');
     }
 });
 
-function initScrollAnimations() {
+/**
+ * Robust reveal-on-scroll using IntersectionObserver.
+ * Elements start with CSS-controlled opacity, not JS-forced 0.
+ */
+function initRevealOnScroll() {
+    const observerOptions = {
+        threshold: 0.15,
+        rootMargin: '0px 0px -50px 0px'
+    };
+
     const observer = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
-                entry.target.classList.add('animate-fade-in');
+                entry.target.classList.add('is-visible');
                 observer.unobserve(entry.target);
             }
         });
-    }, { threshold: 0.1 });
+    }, observerOptions);
 
-    // Observe sections for scroll-in animations
-    document.querySelectorAll('section, portfolio-about, portfolio-projects, portfolio-tech').forEach(el => {
-        el.style.opacity = '0';
+    // Select all major sections and components
+    const revealables = document.querySelectorAll('portfolio-hero, portfolio-about, portfolio-projects, portfolio-tech, section');
+    revealables.forEach(el => {
+        el.classList.add('reveal-on-scroll');
         observer.observe(el);
     });
 }

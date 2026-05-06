@@ -44,16 +44,11 @@
         <p style="font-size: 0.75rem; margin-top: 8px;">Architecture Version: 1.0.1 | Refreshed: May 2026</p>
     </footer>
 
-    <style>
-        /* Specific section transitions for the intersection observer */
-        .animate-fade-in {
-            animation: fadeIn 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards !important;
-            opacity: 1 !important;
-        }
-        @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(20px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
-    </style>
+    <script>
+        // Global Error Handling for Trace Debugging
+        window.addEventListener('error', (e) => {
+            console.error('[Global Error]', e.message, 'at', e.filename, ':', e.lineno);
+        });
+    </script>
 </body>
 </html>
