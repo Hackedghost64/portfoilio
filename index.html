@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+    <title>Divyam | Systems & Automation Developer</title>
+    <meta name="description" content="Engineering scalable, OOP-driven applications and mobile-first web architectures.">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+    
+    <!-- Global CSS -->
+    <link rel="stylesheet" href="css/global.css">
+    
+    <!-- App Entry -->
+    <script type="module" src="js/app.js"></script>
+</head>
+<body>
+    <header>
+        <!-- Nav could be a component later if needed -->
+    </header>
+
+    <main>
+        <portfolio-hero></portfolio-hero>
+        
+        <section id="about">
+            <portfolio-about></portfolio-about>
+        </section>
+
+        <section id="projects">
+            <portfolio-projects></portfolio-projects>
+        </section>
+
+        <section id="tech">
+            <portfolio-tech></portfolio-tech>
+        </section>
+    </main>
+
+    <footer class="grid-container" style="padding: 40px var(--gutter); text-align: center; border-top: 1px solid rgba(140, 144, 159, 0.1); opacity: 0.6;">
+        <p>&copy; 2026 Divyam Gupta. Engineered for Scale.</p>
+    </footer>
+
+    <style>
+        /* Specific section transitions for the intersection observer */
+        .animate-fade-in {
+            animation: fadeIn 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards !important;
+            opacity: 1 !important;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+    </style>
+</body>
+</html>
