@@ -37,9 +37,10 @@ class TechStackComponent extends BaseComponent {
                 transform: scale(1.05);
             }
             .icon {
-                font-size: 2rem;
+                font-size: 3rem;
                 margin-bottom: 1rem;
                 display: block;
+                color: var(--primary);
             }
             span {
                 font-family: var(--font-headline);
@@ -50,12 +51,12 @@ class TechStackComponent extends BaseComponent {
 
     template() {
         const techs = [
-            { name: "Python", icon: "" },
-            { name: "Dart (Flutter)", icon: "" },
-            { name: "Firebase", icon: "" },
-            { name: "Linux", icon: "" },
-            { name: "Git", icon: "" },
-            { name: "System Design", icon: "" }
+            { name: "Python", icon: "terminal" },
+            { name: "Dart (Flutter)", icon: "flutter" },
+            { name: "Firebase", icon: "database" },
+            { name: "Linux", icon: "computer" },
+            { name: "Git", icon: "history" },
+            { name: "System Design", icon: "architecture" }
         ];
 
         return `
@@ -75,4 +76,6 @@ class TechStackComponent extends BaseComponent {
 }
 
 customElements.define('portfolio-tech', TechStackComponent);
+export default TechStackComponent;
+ents.define('portfolio-tech', TechStackComponent);
 export default TechStackComponent;

@@ -1,4 +1,5 @@
 import Logger from './core/Logger.js';
+import './components/Navbar.js';
 import './components/Hero.js';
 import './components/About.js';
 import './components/Projects.js';

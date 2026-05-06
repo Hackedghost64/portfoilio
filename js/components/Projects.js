@@ -5,7 +5,11 @@ class ProjectsComponent extends BaseComponent {
         return `
             :host {
                 display: block;
+                min-height: 100vh;
+                display: flex;
+                align-items: center;
                 padding: var(--section-gap) 0;
+                background: #0f172a;
             }
             .container {
                 max-width: var(--container-max);

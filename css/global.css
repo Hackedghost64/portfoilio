@@ -9,9 +9,13 @@
     --font-body: 'Inter', sans-serif;
     
     /* Layout */
-    --container-max: 1280px;
-    --section-gap: 80px;
-    --gutter: 24px;
+    --container-max: 1440px;
+    --section-gap: clamp(80px, 10vh, 160px);
+    --gutter: clamp(16px, 4vw, 48px);
+}
+
+html {
+    scroll-behavior: smooth;
 }
 
 * {
