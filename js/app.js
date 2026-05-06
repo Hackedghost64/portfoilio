@@ -11,11 +11,17 @@ import './components/TechStack.js';
  */
 document.addEventListener('DOMContentLoaded', () => {
     try {
-        Logger.info('Portfolio bootstrapping...', 'App');
+        console.log('🚀 Portfolio Bootstrapping...');
+        const status = document.createElement('div');
+        status.style.cssText = 'position:fixed;top:0;left:0;background:red;color:white;padding:5px;z-index:9999;font-size:10px;display:none;';
+        status.id = 'system-status';
+        status.innerText = 'JS LOADED';
+        document.body.appendChild(status);
+
         initRevealOnScroll();
-        Logger.info('Bootstrap complete.', 'App');
+        console.log('✅ Bootstrap Complete.');
     } catch (err) {
-        Logger.error(`Bootstrap failed: ${err.message}`, 'App');
+        console.error('❌ Bootstrap Failed:', err);
     }
 });
 
