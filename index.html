@@ -2,71 +2,142 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
-    <title>Divyam | Systems & Automation Developer</title>
-    <meta name="description" content="Engineering scalable, OOP-driven applications and mobile-first web architectures.">
-    <meta name="keywords" content="Portfolio, Software Engineer, Divyam Gupta, Systems, Automation, OOP, Web Architecture">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Divyam Gupta — Developer Tooling &amp; Systems Engineer</title>
+    <meta name="description" content="Divyam Gupta builds developer tooling: AST-based code safety for AI agents, MCP servers, CLIs and cross-platform Flutter apps.">
     <meta name="robots" content="index, follow">
     <link rel="canonical" href="https://hackedghost64.github.io/portfoilio/">
-    
-    <!-- Open Graph for SEO -->
-    <meta property="og:title" content="Divyam | Systems & Automation Developer">
-    <meta property="og:description" content="Engineering scalable, OOP-driven applications and mobile-first web architectures.">
+    <meta property="og:title" content="Divyam Gupta — Developer Tooling &amp; Systems Engineer">
+    <meta property="og:description" content="AST-based code safety for AI agents, MCP servers, CLIs and cross-platform apps.">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://hackedghost64.github.io/portfoilio/">
-    
-    <!-- Fonts -->
+    <meta name="theme-color" content="#0f100d">
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet">
-    
-    <!-- Global CSS -->
-    <link rel="stylesheet" href="css/global.css">
-    
-    <!-- App Entry: Zero-Dependency Bundle -->
-    <script src="js/bundle.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/main.js" defer></script>
 </head>
 <body>
-    <script>
-        // High-Visibility Fatal Error Catcher
-        window.addEventListener('error', (e) => {
-            const overlay = document.createElement('div');
-            overlay.style.cssText = 'position:fixed;top:0;left:0;width:100%;background:#93000a;color:#ffdad6;padding:20px;z-index:999999;font-family:monospace;border-bottom:5px solid #ffb4ab;';
-            overlay.innerHTML = `<b>FATAL ARCHITECTURAL ERROR:</b><br>${e.message}<br><small>${e.filename}:${e.lineno}</small>`;
-            document.body.prepend(overlay);
-        });
-    </script>
-    
-    <header>
-        <portfolio-nav></portfolio-nav>
+    <a class="skip" href="#work">Skip to projects</a>
+
+    <header class="site-header">
+        <a class="brand" href="#top" aria-label="Divyam Gupta, home">Divyam Gupta</a>
+        <nav aria-label="Primary">
+            <a href="#work">Work</a>
+            <a href="#skills">Skills</a>
+            <a href="#approach">Approach</a>
+            <a href="#contact">Contact</a>
+        </nav>
     </header>
 
-    <main>
-        <portfolio-hero id="home"></portfolio-hero>
-        
-        <section id="about" style="scroll-margin-top: 80px;">
-            <portfolio-about></portfolio-about>
+    <main id="top">
+        <section class="hero">
+            <p class="eyebrow">Systems · Developer tooling · Cross-platform</p>
+            <h1>I build tools that make<br><em>AI-written code safe</em> to ship.</h1>
+            <p class="lede">Software engineer working on AST-based code analysis, MCP servers, low-latency CLIs and Flutter apps. I prefer deterministic checks over black boxes, and direct APIs over headless browsers.</p>
+            <div class="actions">
+                <a class="btn primary" href="#work">See the work</a>
+                <a class="btn" href="https://github.com/Hackedghost64" target="_blank" rel="noopener">GitHub @Hackedghost64</a>
+            </div>
         </section>
 
-        <section id="projects" style="scroll-margin-top: 80px;">
-            <portfolio-projects></portfolio-projects>
+        <section id="work" class="section" aria-labelledby="work-h">
+            <div class="section-head">
+                <h2 id="work-h">Selected work</h2>
+                <p>Four projects, each solving one concrete problem.</p>
+            </div>
+
+            <ol class="projects">
+                <li class="project reveal">
+                    <span class="num">01</span>
+                    <div class="body">
+                        <h3>Devrith</h3>
+                        <p class="kicker">AI-native codebase safety middleware</p>
+                        <p>Open-source middleware that lets AI coding agents inspect, contextualize and modify complex codebases safely. It replaces blind token diffing with deterministic AST parsing, so syntax safety is checked before changes land. An MCP-compliant server makes it plug-and-play with agent environments.</p>
+                        <ul class="tags"><li>Python</li><li>Python AST</li><li>MCP server</li><li>CLI</li></ul>
+                        <a class="more" href="https://github.com/Hackedghost64" target="_blank" rel="noopener">View on GitHub →</a>
+                    </div>
+                </li>
+                <li class="project reveal">
+                    <span class="num">02</span>
+                    <div class="body">
+                        <h3>arch-sidecar</h3>
+                        <p class="kicker">Local indexing, telemetry &amp; search sidecar</p>
+                        <p>A lightweight sidecar for low-overhead local file indexing, runtime telemetry and semantic context aggregation. Designed for resource-constrained machines, with no dependent microservices. Selected for indexing in the open-source XERJ Corpus Hub.</p>
+                        <ul class="tags"><li>Python</li><li>Search pipelines</li><li>Telemetry</li></ul>
+                        <a class="more" href="https://github.com/Hackedghost64/arch-sidecar" target="_blank" rel="noopener">View repository →</a>
+                    </div>
+                </li>
+                <li class="project reveal">
+                    <span class="num">03</span>
+                    <div class="body">
+                        <h3>anime-cli</h3>
+                        <p class="kicker">High-throughput terminal &amp; web streaming client</p>
+                        <p>An interactive terminal streamer and web bridge with automatic intro-skipping, multi-source track sync and 1080p stream extraction. It impersonates the client API directly instead of scraping, cutting query latency and payload size, and drives <code>mpv</code> over child-process IPC.</p>
+                        <ul class="tags"><li>Kotlin</li><li>mpv IPC</li><li>API emulation</li></ul>
+                        <a class="more" href="https://github.com/Hackedghost64/anime-cli" target="_blank" rel="noopener">View repository →</a>
+                    </div>
+                </li>
+                <li class="project reveal">
+                    <span class="num">04</span>
+                    <div class="body">
+                        <h3>perfect_news &amp; bluff-war</h3>
+                        <p class="kicker">Cross-platform mobile clients</p>
+                        <p>Responsive Flutter apps with clean state management, structured feeds, smooth animations and caching that holds up on poor connections, with predictable client-side UI states.</p>
+                        <ul class="tags"><li>Dart</li><li>Flutter</li></ul>
+                        <span class="more-row">
+                            <a class="more" href="https://github.com/Hackedghost64/perfect_news" target="_blank" rel="noopener">perfect_news →</a>
+                            <a class="more" href="https://github.com/Hackedghost64/bluff-war" target="_blank" rel="noopener">bluff-war →</a>
+                        </span>
+                    </div>
+                </li>
+            </ol>
         </section>
 
-        <section id="tech" style="scroll-margin-top: 80px;">
-            <portfolio-tech></portfolio-tech>
+        <section id="skills" class="section" aria-labelledby="skills-h">
+            <div class="section-head">
+                <h2 id="skills-h">Skills</h2>
+            </div>
+            <dl class="skills">
+                <div class="reveal"><dt>Languages</dt><dd>Python, Kotlin, Dart, Rust, C/C++, TypeScript, JavaScript, Java</dd></div>
+                <div class="reveal"><dt>Backend &amp; architecture</dt><dd>REST APIs, MCP (Model Context Protocol), AST tooling, CLI tooling, caching layers, WebSockets</dd></div>
+                <div class="reveal"><dt>Frontend &amp; UI</dt><dd>React, Vite, Flutter / Dart, React Native, Tailwind CSS, HTML5 / CSS3</dd></div>
+                <div class="reveal"><dt>DevOps &amp; environments</dt><dd>Linux (Ubuntu), Git, Cloudflare Tunnels, reverse proxies</dd></div>
+            </dl>
+        </section>
+
+        <section id="approach" class="section" aria-labelledby="approach-h">
+            <div class="section-head">
+                <h2 id="approach-h">How I work</h2>
+            </div>
+            <div class="principles">
+                <article class="reveal">
+                    <h3>Deterministic over black box</h3>
+                    <p>AST-level analysis and formal checks make sure generated code doesn't introduce structural runtime errors.</p>
+                </article>
+                <article class="reveal">
+                    <h3>Lean by default</h3>
+                    <p>Aggressive caching, API impersonation over headless browsers, and small process footprints for edge and developer machines.</p>
+                </article>
+                <article class="reveal">
+                    <h3>Across the stack</h3>
+                    <p>From system utilities in Kotlin, C and Python to reactive interfaces in React, Vite and Flutter.</p>
+                </article>
+            </div>
+        </section>
+
+        <section id="contact" class="section contact" aria-labelledby="contact-h">
+            <h2 id="contact-h">Let's build something.</h2>
+            <p>The best way to reach me and see my code is GitHub.</p>
+            <a class="btn primary" href="https://github.com/Hackedghost64" target="_blank" rel="noopener">github.com/Hackedghost64</a>
         </section>
     </main>
 
-    <footer style="padding: 40px var(--gutter); text-align: center; border-top: 1px solid rgba(140, 144, 159, 0.1); opacity: 0.6; max-width: var(--container-max); margin: 0 auto;">
-        <p>&copy; 2026 Divyam Gupta. Engineered for Scale.</p>
+    <footer class="site-footer">
+        <p>© 2026 Divyam Gupta</p>
+        <a href="#top">Back to top ↑</a>
     </footer>
-
-    <script>
-        // Global Error Handling for Trace Debugging
-        window.addEventListener('error', (e) => {
-            console.error('[Global Error]', e.message, 'at', e.filename, ':', e.lineno);
-        });
-    </script>
 </body>
 </html>
