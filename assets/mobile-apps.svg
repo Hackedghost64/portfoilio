@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 900" role="img" aria-label="Two overlapping phone screens with a news feed and playing cards">
+  <rect width="1200" height="900" fill="#1a1a16"/>
+  <g transform="rotate(-8 430 470)">
+    <rect x="270" y="170" width="320" height="600" rx="40" fill="#23231e" stroke="#4a4638" stroke-width="3"/>
+    <rect x="300" y="215" width="260" height="130" rx="14" fill="#e8b25a"/>
+    <rect x="300" y="365" width="200" height="14" rx="7" fill="#ece8dd"/>
+    <rect x="300" y="395" width="260" height="10" rx="5" fill="#6d6858"/>
+    <rect x="300" y="415" width="230" height="10" rx="5" fill="#6d6858"/>
+    <rect x="300" y="460" width="260" height="90" rx="14" fill="#2e2d26"/>
+    <rect x="300" y="570" width="260" height="90" rx="14" fill="#2e2d26"/>
+  </g>
+  <g transform="rotate(7 770 440)">
+    <rect x="620" y="140" width="320" height="600" rx="40" fill="#23231e" stroke="#4a4638" stroke-width="3"/>
+    <rect x="660" y="260" width="110" height="160" rx="12" fill="#ece8dd"/>
+    <text x="680" y="310" font-family="Georgia,serif" font-size="44" fill="#1a1a16">A</text>
+    <rect x="740" y="290" width="110" height="160" rx="12" fill="#e8b25a" transform="rotate(14 795 370)"/>
+    <text x="772" y="352" font-family="Georgia,serif" font-size="44" fill="#1a1a16" transform="rotate(14 795 370)">K</text>
+    <rect x="680" y="520" width="200" height="14" rx="7" fill="#ece8dd"/>
+    <rect x="680" y="552" width="150" height="10" rx="5" fill="#6d6858"/>
+  </g>
+</svg>
